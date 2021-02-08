@@ -2,16 +2,23 @@
   "name": "yfinance-live",
   "version": "0.1.1",
   "description": "Yahoo Finance Live Data",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "lib/**/*"
+    "dist/**/*"
   ],
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "tsc",
+    "copy": "copyfiles -u 1 \"src/**/*.d.ts\" dist",
+    "build": "tsc && yarn copy",
     "format": "prettier --write \"*/**/*.{js,ts,tsx}\"",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix",
-    "clean": "rimraf lib"
+    "clean": "rimraf dist",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -36,6 +43,7 @@
     "@types/ws": "^7.4.0",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
+    "copyfiles": "^2.4.1",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
