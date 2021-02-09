@@ -8,7 +8,7 @@ class YFinanceLive {
 
   constructor(
     tickers: string[],
-    ondata: (data: any) => any,
+    ondata: (data: yfinancedata) => any,
     onclose?: (e: WebSocket.CloseEvent) => any,
     onerror?: (e: WebSocket.ErrorEvent) => any
   ) {
@@ -44,9 +44,9 @@ class YFinanceLive {
 
 export default (
   tickers: string[],
-  ondata: (data: any) => any,
+  ondata: (data: yfinancedata) => any,
   onclose?: (e: WebSocket.CloseEvent) => any,
   onerror?: (e: WebSocket.ErrorEvent) => any
 ) => new YFinanceLive(tickers, ondata, onclose, onerror)
 
-export { YFinanceLive }
+export { YFinanceLive, yfinancedata }
