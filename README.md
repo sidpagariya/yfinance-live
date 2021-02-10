@@ -50,7 +50,7 @@ let yfinanceObj = new YFinanceLive(['GOOGL', 'AAPL', 'TSLA'], onchange)
 Example using the default import:
 
 ```ts
-import YFinance from 'yfinance-live'
+import YFinance, { yfinancedata } from 'yfinance-live'
 function onchange(data: yfinancedata) {
   console.log(yfinancedata)
 }
