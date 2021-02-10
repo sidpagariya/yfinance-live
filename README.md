@@ -64,5 +64,5 @@ import { YFinanceLive, yfinancedata } from 'yfinance-live'
 function onchange(data: yfinancedata) {
   console.log(yfinancedata)
 }
-let yfinanceObj = YFinanceLive(['GOOGL', 'AAPL', 'TSLA'], onchange)
+let yfinanceObj = new YFinanceLive(['GOOGL', 'AAPL', 'TSLA'], onchange)
 ```
