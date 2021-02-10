@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sidpagariya/yfinance-ws.git"
+    "url": "git+https://github.com/sidpagariya/yfinance-live.git"
   },
   "keywords": [
     "yahoo-finance",
@@ -35,9 +35,9 @@
   "author": "Sid Pagariya <sid@sidp.me>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sidpagariya/yfinance-ws/issues"
+    "url": "https://github.com/sidpagariya/yfinance-live/issues"
   },
-  "homepage": "https://github.com/sidpagariya/yfinance-ws#readme",
+  "homepage": "https://github.com/sidpagariya/yfinance-live#readme",
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "@types/ws": "^7.4.0",
